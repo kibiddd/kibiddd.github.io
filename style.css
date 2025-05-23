@@ -75,3 +75,11 @@ video {
 .paper-links a:hover {
   text-decoration: underline;
 }
+
+.subtle-note {
+  margin-top: -10px;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
