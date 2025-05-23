@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lie to Me: Demo Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>🕵️‍♀️ Lie to Me, I Dare You!</h1>
+  
+  <div class="grid">
+    <button onclick="playVideo('ll-legit.mp4')">1. LinkLynx vs. Legit URL</button>
+    <button onclick="playVideo('ll-phish.mp4')">2. LinkLynx vs. Phishing URL</button>
+    <button onclick="playVideo('scout-legit.mp4')">3. SCOUT vs. Legit Chat</button>
+    <button onclick="playVideo('scout-scam.mp4')">4. SCOUT vs. Scam Chat</button>
+    <button onclick="playVideo('scout-scam-1.mp4')">5. SCOUT & LinkLynx vs. Scam</button>
+  </div>
+
+  <h2 id="videoTitle">1. LinkLynx vs. Legit URL</h2>
+
+  <div class="player">
+    <video id="videoPlayer" width="800" controls autoplay muted>
+      <source src="videos/ll-legit.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <script>
+    const videoTitles = {
+      "ll-legit.mp4": "1. LinkLynx vs. Legit URL",
+      "ll-phish.mp4": "2. LinkLynx vs. Phishing URL",
+      "scout-legit.mp4": "3. SCOUT vs. Legit Chat",
+      "scout-scam.mp4": "4. SCOUT vs. Scam Chat",
+      "scout-scam-1.mp4": "5. SCOUT & LinkLynx vs. Scam"
+    };
+
+    function playVideo(filename) {
+      const player = document.getElementById("videoPlayer");
+      const title = document.getElementById("videoTitle");
+
+      player.src = "videos/" + filename;
+      title.textContent = videoTitles[filename] || "Demo Video";
+      player.load();
+      player.play();
+    }
+  </script>
+</body>
+</html>
