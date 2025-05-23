@@ -49,27 +49,18 @@ video {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 .papers {
-  font-size: 1.05em;
   text-align: center;
+  font-size: 1.05em;
   margin-bottom: 20px;
 }
 
-.paper-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
 
-.paper-links a {
-  font-size: 1rem;
+.papers a {
   color: #0077cc;
   text-decoration: none;
-  white-space: nowrap;
 }
 
-.paper-links a:hover {
+.papers a:hover {
   text-decoration: underline;
 }
